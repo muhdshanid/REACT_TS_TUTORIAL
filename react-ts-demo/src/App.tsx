@@ -1,10 +1,18 @@
 
 import './App.css'
+import { Private } from './components/auth/Private'
+import { Profile } from './components/auth/Profile'
+import { Counter } from './components/class/Counter'
 import Box from './components/context/Box'
 import { ThemeContextProvider } from './components/context/ThemeContext'
 import { UserContextProvider } from './components/context/UserContext'
-import Counter from './components/state/Counter'
+import { List } from './components/generics/List'
+import { ButtonComponent } from './components/html/ButtonComponent'
+import { Text } from './components/polymorphic/Text'
+import RandomNumber from './components/restriction/RandomNumber'
+// import Counter from './components/state/Counter'
 import User from './components/state/User'
+import { Toast } from './components/templateLiterals/Toast'
 // import Button from './components/Button'
 // import Container from './components/Container'
 // import Greet from './components/Greet'
@@ -55,9 +63,22 @@ function App() {
      {/* <ThemeContextProvider>
       <Box/>
      </ThemeContextProvider> */}
-     <UserContextProvider>
+     {/* <UserContextProvider>
       <User/>
-     </UserContextProvider>
+     </UserContextProvider> */}
+     {/* <Counter message='some'/>
+     <Private isLoggedIn={true} component={Profile}/> */}
+     {/* <List  items={[{id:1,first:"some"}]} onClick={(item) => console.log(item) */}
+     {/* }/> */}
+     {/* <RandomNumber value={10} isPositive />
+     <Toast position='center'/> */}
+     {/* <ButtonComponent variant="primary" onClick={() => console.log("hi")}
+     >
+some
+     </ButtonComponent> */}
+     <Text htmlFor="some" as="label" size='lg'>Heading</Text>
+     <Text htmlFor="someId" as="label" size='sm'>Label</Text>
+     <Text as="p" size='md' color='primary'>Paragraph</Text>
     </>
   )
 }

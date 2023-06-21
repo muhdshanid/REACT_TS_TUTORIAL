@@ -8,7 +8,7 @@ export const MutableRef = () => {
     if(interValRef.current){
       window.clearInterval(interValRef.current)
     }
-  }
+  } 
   useEffect(() => {
     interValRef.current = window.setInterval(() => {
       setTimer(timer => timer + 1)
